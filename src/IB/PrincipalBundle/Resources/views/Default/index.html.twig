@@ -46,7 +46,9 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand page-scroll" href="#page-top">IberoBus</a>
+                <a class="navbar-brand page-scroll" href="#page-top">
+					<img src="{{asset('img/logo.png')}}" alt="" width="25px;">
+	            </a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -75,17 +77,22 @@
 
     <header>
         <div class="header-content">
-            <div class="header-content-inner">
-                <h1>IberoBus</h1>
-                <hr>
-                <p style="    color: rgba(255, 255, 255, 0.88);">¿Cansado de esperar el autobús?
-                <br>
-				Con IBERObus podrás saber su ubicación y cupo en tiempo real</p>
-                <div class="row">
-                    <div class="text-right col-xs-6"><img src="{{asset('img/appstore.png')}}"></div>
-                    <div class="text-left col-xs-6"><img src="{{asset('img/googlePlay.png')}}"></div>
-                </div>
-            </div>
+        	<div class="col-xs-4">
+        		<img src="{{asset('img/chica.png')}}" alt="" width="100%">
+        	</div>
+        	<div class="col-xs-8">
+        		<div class="header-content-inner">
+	                <h1>IberoBus</h1>
+	                <hr>
+	                <p style="    color: rgba(255, 255, 255, 0.88);">¿Cansado de esperar el autobús?
+	                <br>
+					Con IBERObus podrás saber su ubicación y cupo en tiempo real</p>
+	                <div class="row">
+	                    <div class="text-right col-xs-6"><img src="{{asset('img/appstore.png')}}"></div>
+	                    <div class="text-left col-xs-6"><img src="{{asset('img/googlePlay.png')}}"></div>
+	                </div>
+	            </div>
+        	</div>
         </div>
     </header>
 
