@@ -1,3 +1,7 @@
+ibapi:
+    resource: "@IBAPIBundle/Resources/config/routing.yml"
+    prefix:   /
+
 ib_principal:
     resource: "@IBPrincipalBundle/Resources/config/routing.yml"
     prefix:   /
