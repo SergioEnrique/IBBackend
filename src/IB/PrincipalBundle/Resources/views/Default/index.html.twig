@@ -52,6 +52,7 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
+                	{#
                     <li>
                         <a class="page-scroll" href="#about">About</a>
                     </li>
@@ -64,6 +65,7 @@
                     <li>
                         <a class="page-scroll" href="#contact">Contact</a>
                     </li>
+                    #}
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -76,8 +78,13 @@
             <div class="header-content-inner">
                 <h1>IberoBus</h1>
                 <hr>
-                <p>Start Bootstrap can help you build better websites using the Bootstrap CSS framework! Just download your template and start going, no strings attached!</p>
-                <a href="#about" class="btn btn-primary btn-xl page-scroll">Find Out More</a>
+                <p style="    color: rgba(255, 255, 255, 0.88);">¿Cansado de esperar el autobús?
+                <br>
+				Con IBERObus podrás saber su ubicación y cupo en tiempo real</p>
+                <div class="row">
+                    <div class="text-right col-xs-6"><img src="{{asset('img/appstore.png')}}"></div>
+                    <div class="text-left col-xs-6"><img src="{{asset('img/googlePlay.png')}}"></div>
+                </div>
             </div>
         </div>
     </header>
@@ -262,7 +269,7 @@
                 </div>
                 <div class="col-lg-4 text-center">
                     <i class="fa fa-envelope-o fa-3x wow bounceIn" data-wow-delay=".1s"></i>
-                    <p><a href="mailto:your-email@your-domain.com">contacto@packandpack.com</a></p>
+                    <p><a href="mailto:contacto@packandpack.com">contacto@packandpack.com</a></p>
                 </div>
             </div>
         </div>
