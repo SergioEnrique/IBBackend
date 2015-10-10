@@ -1,3 +1,3 @@
 ib_principal_homepage:
-    path:     /hello/{name}
+    path:     /
     defaults: { _controller: IBPrincipalBundle:Default:index }
