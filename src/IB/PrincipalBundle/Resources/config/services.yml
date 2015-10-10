@@ -1,0 +1,4 @@
+services:
+#    ib_principal.example:
+#        class: IB\PrincipalBundle\Example
+#        arguments: [@service_id, "plain_value", %parameter%]
