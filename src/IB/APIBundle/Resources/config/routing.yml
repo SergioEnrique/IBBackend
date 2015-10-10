@@ -1,0 +1,3 @@
+ib_api_user:
+    type:     rest
+    resource: IB\APIBundle\Controller\UserController
