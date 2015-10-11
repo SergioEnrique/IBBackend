@@ -1,3 +1,7 @@
 ib_principal_homepage:
     path:     /
     defaults: { _controller: IBPrincipalBundle:Default:index }
+
+ib_principal_mapa:
+    path:     /mapa
+    defaults: { _controller: IBPrincipalBundle:Default:mapa }

@@ -10,4 +10,9 @@ class DefaultController extends Controller
     {
         return $this->render('IBPrincipalBundle:Default:index.html.twig');
     }
+
+    public function mapaAction()
+    {
+         return $this->render('IBPrincipalBundle:Default:mapa.html.twig');
+    }
 }

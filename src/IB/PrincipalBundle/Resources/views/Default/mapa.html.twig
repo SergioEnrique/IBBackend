@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Iberobus</title>
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+    <style>
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      #map {
+        height: 100%;
+      }
+    </style>
+    <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA08xffQHOuLVke-REoy4V1cM3sKDszhvY&callback=initMap"
+        async defer></script>
+  </head>
+  <body>
+    <div id="map"></div>
+    <script>
+    var myDataRef = new Firebase('https://luminous-fire-2676.firebaseio.com/');
+
+    var map;
+    var markerbus;
+
+    function initMap() {
+      map = new google.maps.Map(document.getElementById('map'), {
+        center: {lat: 19.0291717, lng: -98.2440566},
+        zoom: 16
+      });
+      var ctaLayer = new google.maps.KmlLayer({
+        url: 'http://iberobus.brainycreations.com/kml.kml',
+        map: map
+      });
+      markerbus = new google.maps.Marker({
+        position: {lat: 19.0291717, lng: -98.2440566},
+        map: map,
+        icon: 'https://github.com/SergioEnrique/BuscaIberoBus/blob/master/img/bus.png?raw=true',
+        title: 'IberoBus'
+      });
+    }
+
+    myDataRef.on("value", function(snapshot) {
+      
+      var iberobus = snapshot.val();
+      var recorridos = iberobus['recorridos'];
+      var last = recorridos[recorridos.length - 1];
+      var currentPosition = {lat: last.lat, lng: last.lng};
+
+      console.log(currentPosition);
+
+      markerbus.setPosition(currentPosition);
+
+
+    }, function (errorObject) {
+      console.log("The read failed: " + errorObject.code);
+    });
+
+    </script>
+    
+  </body>
+</html>
